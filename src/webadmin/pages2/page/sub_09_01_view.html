@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '공지사항관리',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/board-view.html', {
+                        prev : 'sub_09_01'
+                    })
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

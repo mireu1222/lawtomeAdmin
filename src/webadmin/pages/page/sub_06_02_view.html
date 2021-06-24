@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub06 : '02'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '유료상품 결제내역',
+                title : '회원',
+                cate06 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-person-circle me-1"></i>회원 정보</h3>
+                    <table class="table row-table">
+                        <colgroup>
+                            <col style="width:15%">
+                            <col>
+                            <col style="width:15%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">회원명</th>
+                                <td>홍길동</td>
+                                <th scope="row">회원아이디</th>
+                                <td>gildong2</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대폰</th>
+                                <td>010-0000-0000</td>
+                                <th scope="row">이메일</th>
+                                <td>gildong2@naver.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-zoom-in me-1"></i>상품 정보</h3>
+                    <table class="table row-table">
+                        <colgroup>
+                            <col style="width:15%">
+                            <col>
+                            <col style="width:15%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">결제상품명</th>
+                                <td>상위노출</td>
+                                <th scope="row">서비스 금액</th>
+                                <td>1개월 00,000원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-basket me-1"></i>결제 정보</h3>
+                    <table class="table row-table">
+                        <colgroup>
+                            <col style="width:15%">
+                            <col>
+                            <col style="width:15%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">상품금액</th>
+                                <td>00,000원</td>
+                                <th scope="row">실결제금액</th>
+                                <td>00,000원 (쿠폰할인 0,000원, 적립금 할인 0,000원)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제종류</th>
+                                <td>신용카드</td>
+                                <th scope="row">결제여부</th>
+                                <td>결제완료</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">결제신청일</th>
+                                <td>2021-00-00</td>
+                                <th scope="row">결제확인일</th>
+                                <td>2021-00-00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-pencil-square me-1"></i>관리자 메모</h3>
+                    <textarea class="form-control"></textarea>
+                </section>
+                <div class="btn-wrap d-flex justify-content-center mt-4">
+                    <a href="sub_06_02.html" class="btn btn-gray">목록</a>
+                    <button type="button" class="btn btn-dark ms-2">수정</button>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

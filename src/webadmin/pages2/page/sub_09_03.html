@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '03'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '자주찾는질문관리',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/search.html', {
+                        del : true,
+                        page : 'sub_09_03_write'
+                    })
+                    @@include('./modules/board-list.html', {
+                        faq : true,
+                        view : 'sub_09_03_view'
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

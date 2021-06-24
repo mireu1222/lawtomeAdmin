@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub10 : '06'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '알림 설정',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-gear me-1"></i>회원가입시 SMS문자 및 가우로톡 메세지 설정</h3>
+                    <div class="border p-4"></div>
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-gear me-1"></i>유료결제시 SMS문자 및 가우로톡 메세지 설정</h3>
+                    <div class="border p-4"></div>
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-gear me-1"></i>무통장입금 입금확인시 SMS문자 및 가우로톡 메세지 설정</h3>
+                    <div class="border p-4"></div>
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-gear me-1"></i>1:1문의게시판 답변이 작성될 경우 SMS문자 및 가우로톡 메세지 설정</h3>
+                    <div class="border p-4"></div>
+                </section>
+                <div class="btn-wrap d-flex justify-content-center mt-4">
+                    <button type="button" class="btn btn-gray">취소</button>
+                    <button type="submit" class="btn btn-dark ms-2">저장</button>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

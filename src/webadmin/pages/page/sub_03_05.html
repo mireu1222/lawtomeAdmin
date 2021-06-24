@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub03 : '05'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '회원비밀번호변경 설정',
+                cate03 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-gear me-1"></i>설정</h3>
+                    <table class="table row-table">
+                        <colgroup>
+                            <col style="width:20%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">비밀번호 변경 기능 사용설정</th>
+                                <td>
+                                    <div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" value="" id="use" name="option-state">
+                                            <label class="form-check-label" for="use">사용</label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" value="" id="unuse" name="option-state">
+                                            <label class="form-check-label" for="unuse">미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">비밀번호 변경 기준일</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <p>마지막 변경 후</p>
+                                        <input type="text" class="form-control w-auto text-end" value="90" aria-label="비밀번호 변경 기준일 입력">
+                                        <p>일 지날 경우 <strong>비밀번호 변경 안내 페이지 이동</strong></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <div class="btn-wrap d-flex justify-content-center mt-4">
+                    <button type="button" class="btn btn-gray">취소</button>
+                    <button type="submit" class="btn btn-dark ms-2">저장</button>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

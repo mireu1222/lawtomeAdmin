@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub01 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '대행업무 등록현황',
+                title : '대행업무 지원내역',
+                cate01 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/cont-box.html')
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        state : true,
+                        excel : true
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype : true,
+                        sub0101list : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

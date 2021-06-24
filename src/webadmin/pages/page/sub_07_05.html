@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub07 : '05'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '가우로톡 통계',
+                cate07 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        periodEdit : {
+                            th : '기간'
+                        },
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        sub0705 : true
+                    })
+                </section>
+                <section class="sect">
+                    <div id="chart"></div>
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+
+    <script>
+        var chart = c3.generate({
+            bindto: '#chart',
+            data: {
+                x: 'x',
+                columns: [
+                    ['x', '2021-07-01', '2021-07-02', '2021-07-03', '2021-07-04', '2021-07-05', '2021-07-06', '2021-07-07', '2021-07-08', '2021-07-09'],
+                    ['가우로톡 통계', 30, 200, 100, 400, 150, 250, 300, 200, 100]
+                ]
+            },
+            color: {
+                pattern: ['#1965b0']
+            },
+            axis : {
+                x : {
+                    type : 'timeseries',
+                    tick : {
+                        format : '%Y%m%d',
+                        // culling: {
+                        //     max : 5
+                        // },
+                        rotate : '-50'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

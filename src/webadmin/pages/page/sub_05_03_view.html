@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub05 : '03'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '적립금관리',
+                title : '회원 상세',
+                cate05 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-person-circle me-1"></i>회원 정보</h3>
+                    <table class="table row-table">
+                        <colgroup>
+                            <col style="width:15%;">
+                            <col>
+                            <col style="width:15%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">회원명</th>
+                                <td>김회원</td>
+                                <th scope="row">회원ID</th>
+                                <td>abcd</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대폰</th>
+                                <td>010-0000-0000</td>
+                                <th scope="row">이메일</th>
+                                <td>abcd@naver.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        title : '2021년 6월 1일 ~ 2021년 8월 1일',
+                        sub0503 : true
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        excel : true,
+                        delete : true
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype : true,
+                        sub0503view : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

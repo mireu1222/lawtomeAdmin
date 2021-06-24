@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub08 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '팝업관리',
+                cate08 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/search.html', {
+                        del : true,
+                        page : 'sub_08_01_write'
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype : true,
+                        sub0801 : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub03 : '03'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '탈퇴회원',
+                cate03 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        period: {
+                            option : [
+                                '탈퇴일'
+                            ]
+                        },
+                        input2 : 'ID'
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        excel : true,
+                    })
+
+                    @@include('./modules/list-table.html', {
+                        sub0303 : true,
+                    })
+
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

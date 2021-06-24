@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '05'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '이벤트관리',
+                prev2 : '이벤트 공지',
+                title : '이벤트',
+                cate09 : true,
+            })
+
+            <ul class="nav nav-tabs sub-page-tab">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="sub_09_05_01.html">이벤트 공지</a></li>
+                <li class="nav-item"><a class="nav-link" href="sub_09_05_02.html">당첨자 관리</a></li>
+            </ul>
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-pencil-square me-1"></i>등록</h3>
+                    @@include('./modules/write-table.html', {
+                        sub090501a : true,
+                    })
+                </section>
+                <div class="btn-wrap d-flex justify-content-center mt-4">
+                    <a href="sub_09_05_01.html" class="btn btn-gray me-auto">목록</a>
+                    <a href="sub_09_05_01_edit.html" class="btn btn-dark">수정</a>
+                    <button type="button" class="btn btn-danger ms-1">삭제</button>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

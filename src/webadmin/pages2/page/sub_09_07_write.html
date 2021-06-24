@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '07'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '정보게시판관리',
+                title : '등록/수정',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-pencil-square me-1"></i>등록/수정</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0907 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_09_07'
+                    })
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

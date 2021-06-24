@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '04'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '1:1문의관리',
+                title : '문의 내역',
+                cate09 : true,
+            })
+
+            <ul class="nav nav-tabs sub-page-tab">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="sub_09_04_01.html">문의 내역</a></li>
+                <li class="nav-item"><a class="nav-link" href="sub_09_04_02.html">문의 설정</a></li>
+            </ul>
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        datepic : true,
+                        select : {
+                            th : '처리상태',
+                            option : [
+                                '선택', '접수확인', '접수중', '답변완료'
+                            ]
+                        }
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html')
+                    @@include('./modules/list-table.html', {
+                        sub090401 : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '02'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '뉴스/언론관리',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/search.html', {
+                        del : true,
+                        page : 'sub_09_02_write'
+                    })
+                    @@include('./modules/board-list.html', {
+                        view : 'sub_09_02_view'
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

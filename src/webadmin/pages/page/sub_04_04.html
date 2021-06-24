@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub04 : '04'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '현금영수증신청내역',
+                cate04 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        periodEdit : {
+                            th : '대행업무일'
+                        },
+                        input : {
+                            th1 : '신청자ID',
+                            th2 : '신청자명'
+                        },
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        stateEdit : {
+                            title : '발행상태',
+                            option : [
+                                '전체', '발행', '미발행'
+                            ]
+                        },
+                        excel : true,
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype :true,
+                        sub0404 : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

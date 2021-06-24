@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub01 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '대행업무 등록현황',
+                title : '대행업무',
+                cate01 : true,
+            })
+
+            <div class="page-section">
+                <!-- 복대리 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 복대리 case -->
+
+                <!-- 기록등사 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit2 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 기록등사 case -->
+
+                <!-- 조사참여 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit3 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 조사참여 case -->
+
+                <!-- 접견 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit4 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 접견 case -->
+
+                <!-- 서면작성 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit5 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 서면작성 case -->
+
+                <!-- 계약서 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit6 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 계약서 case -->
+
+                <!-- 증명서발급 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit7 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 증명서발급 case -->
+
+                <!-- 기타 case -->
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list-check me-1"></i>대행업무 내용</h3>
+                    @@include('./modules/write-table.html', {
+                        sub0101edit8 : true,
+                        button : true,
+                        btntype : 'save',
+                        prev : 'sub_01_01'
+                    })
+                </section>
+                <!-- // 기타 case -->
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub01 : '05'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '대행업무 완료관리',
+                title : '예약한 대행업무',
+                cate01 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/cont-box.html')
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        state : true,
+                        excel : true
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype : true,
+                        sub0105view : true,
+                    })
+
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

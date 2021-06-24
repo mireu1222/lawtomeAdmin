@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub02 : '03'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '변호사 찜 관리',
+                title : '찜한 회원',
+                cate02 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        title : '회원 정보',
+                        sub0203view1 : true,
+                    })
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-list me-1"></i>찜한 회원 내역</h3>
+                    @@include('./modules/filter.html', {
+                        excel : true,
+                    })
+                    @@include('./modules/list-table.html', {
+                        sub0203view : true
+                    })
+
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

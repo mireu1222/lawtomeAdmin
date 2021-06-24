@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '07'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '정보게시판관리',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/search.html', {
+                        page : 'sub_09_07_write',
+                    })
+                    @@include('./modules/board-list.html', {
+                        view : 'sub_09_07_view'
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

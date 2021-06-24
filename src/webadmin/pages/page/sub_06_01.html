@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub06 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '유료상품 관리',
+                cate06 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        periodEdit : {
+                            th : '결제일'
+                        },
+                        checkbox : {
+                            th : '상태',
+                            id : 'state',
+                            all : true,
+                            input : [
+                                '활성', '비활성'
+                            ]
+                        },
+                        input2 : '검색'
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        modal : {
+                            target : 'edit-modal',
+                            name : '등록'
+                        },
+                        excel : true,
+                        delete : true
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype : true,
+                        sub0601 : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+
+    @@include('./modules/modal.html', {
+        id : 'edit',
+        size : 'full',
+        title : '유료상품 등록/수정',
+        sub0601 : true,
+        btn : '확인'
+    })
+</body>
+</html>

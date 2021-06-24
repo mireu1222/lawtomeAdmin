@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub05 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '정산현황내역',
+                title : '대행업무 정산',
+                cate05 : true,
+            })
+
+            <ul class="nav nav-tabs sub-page-tab">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="sub_05_01_01.html">대행업무 정산</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sub_05_01_02.html">수수료 정산</a>
+                </li>
+            </ul>
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        periodEdit : {
+                            th : '기간'
+                        },
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        title : '2021년 6월 1일 ~ 2021년 9월 1일',
+                        sub050101 : true
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        title : '수입(업무대행입금) 총액',
+                        sub050101a : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        title : '지출(업무대행비) 총액',
+                        sub050101a : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

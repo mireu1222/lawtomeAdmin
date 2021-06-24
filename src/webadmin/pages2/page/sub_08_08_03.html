@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub08 : '08'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '모바일관리',
+                title : '메인중간배너관리',
+                cate08 : true,
+            })
+
+            <ul class="nav nav-tabs sub-page-tab">
+                <li class="nav-item"><a class="nav-link" href="sub_08_08_01.html">팝업관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="sub_08_08_02.html">메인배너관리</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="sub_08_08_03.html">메인중간배너관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="sub_08_08_04.html">하단배너관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="sub_08_08_05.html">서브배너관리</a></li>
+            </ul>
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/search.html', {
+                        del : true,
+                        page : 'sub_08_08_03_write'
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype : true,
+                        sub0802 : true,
+                        edit : 'sub_08_08_03'
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

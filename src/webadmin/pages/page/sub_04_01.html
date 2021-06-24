@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub04 : '01'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '대행업무진행관리',
+                cate04 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        period : true,
+                        input : {
+                            th1 : '회원ID',
+                            th2 : '회원명'
+                        },
+                        input2 : '대행업무명(키워드)'
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        excel : true,
+                        delete : true
+                    })
+                    @@include('./modules/list-table.html', {
+                        chktype :true,
+                        sub0401 : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

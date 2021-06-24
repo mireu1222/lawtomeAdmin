@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub09 : '04'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '1:1문의관리',
+                title : '문의 내역',
+                cate09 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-chat-right-text me-1"></i>질문</h3>
+                    @@include('./modules/board-view.html', {
+                        qna : true,
+                        prev : 'sub_09_04'
+                    })
+                </section>
+                <section class="sect">
+                    <h3 class="h3-title"><i class="bi bi-pencil-square me-1"></i>답변</h3>
+                    @@include('./modules/write-table.html', {
+                        sub090401 : true,
+                        button : true,
+                        btntype : 'save3',
+                        prev : 'sub_09_04_01'
+                    })
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

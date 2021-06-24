@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub05 : '02'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                title : '결제내역관리',
+                cate05 : true,
+            })
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        periodEdit : {
+                            th : '결제일'
+                        },
+                        checkbox : {
+                            th : '결제상태',
+                            id : 'paystate',
+                            all : true,
+                            input : [
+                                '완료', '취소'
+                            ]
+                        },
+                        input2 : '검색'
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/list-table.html', {
+                        title : '2021년 6월 1일 ~ 2021년 8월 1일',
+                        sub0502 : true
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        excel : true,
+                    })
+                    @@include('./modules/list-table.html', {
+                        sub0502a : true
+                    })
+                    @@include('./modules/pagination.html')
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <!-- body -->
+    <div id="wrap">
+        @@include('./layout/header.html', {
+            sub07 : '04'
+        })
+
+        <!-- contents -->
+        <div class="contents">
+            @@include('./layout/page-title.html', {
+                exTitle : true,
+                prev : '결제/광고 통계',
+                title : '월별 검색',
+                cate07 : true,
+            })
+
+            <ul class="nav nav-tabs sub-page-tab">
+                <li class="nav-item">
+                    <a class="nav-link" href="sub_07_04_01.html">기간 검색</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="sub_07_04_02.html">월별 검색</a>
+                </li>
+            </ul>
+
+            <div class="page-section">
+                <section class="sect">
+                    @@include('./modules/list-search.html', {
+                        select : {
+                            th : '연도',
+                            option : [
+                                '2021'
+                            ]
+                        }
+                    })
+                </section>
+                <section class="sect">
+                    @@include('./modules/filter.html', {
+                        excel : true,
+                    })
+                    @@include('./modules/list-table.html', {
+                        sub070402 : true,
+                    })
+                </section>
+            </div>
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- // body -->
+</body>
+</html>
